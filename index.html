@@ -10,6 +10,51 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>eng lui</title>
+        
+        <style>
+            /* Additional CSS for typewriter effect */
+            .typing-container {
+                display: inline-block;
+                position: relative;
+            }
+            
+            .cursor {
+                display: inline-block;
+                width: 3px;
+                background-color: var(--first-color);
+                margin-left: 2px;
+                animation: blink 1s infinite;
+            }
+            
+            @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+            
+            /* About section typewriter styles */
+            .about-typing-container {
+                min-height: 120px;
+                position: relative;
+            }
+            
+            .about-cursor {
+                display: inline-block;
+                width: 3px;
+                background-color: var(--first-color);
+                margin-left: 2px;
+                animation: blink 1s infinite;
+            }
+            
+            .emoji {
+                font-size: 1.2em;
+                margin: 0 2px;
+            }
+            
+            .bold-text {
+                font-weight: bold;
+                color: var(--first-color);
+            }
+        </style>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -39,7 +84,11 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eng Lui</span><br> Software Engineer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eng Lui</span><br> 
+                        <span class="typing-container">
+                            <span id="typing-text"></span><span class="cursor"></span>
+                        </span>
+                    </h1>
 
                     <a href="#" class="button">Contact</a>
                 </div>
@@ -79,8 +128,10 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">I'am Luis Madziro |eng lui|</h2>
-                        <p class="about__text">Visionary|An Exceptional Technoprenuer |Unique Blend of Technical Expertise|Entrepreneurial Vision |Rentless Drive for Innovation in Financial Markets |Software Engineer |</p>           
+                        <h2 class="about__subtitle">Get to know me</h2>
+                        <div class="about-typing-container">
+                            <span id="about-typing-text"></span><span class="about-cursor"></span>
+                        </div>           
                     </div>                                   
                 </div>
             </section>
@@ -260,5 +311,83 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        
+        <!-- Typewriter Effect Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Home section typewriter
+                const typingText = document.getElementById('typing-text');
+                const texts = ["Software Engineer", "Tech Entrepreneur"];
+                let textIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                let typingSpeed = 100;
+                let deletingSpeed = 50;
+                let pauseTime = 1500;
+
+                function type() {
+                    const currentText = texts[textIndex];
+                    
+                    if (!isDeleting && charIndex < currentText.length) {
+                        // Typing
+                        typingText.textContent += currentText.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, typingSpeed);
+                    } else if (isDeleting && charIndex > 0) {
+                        // Deleting
+                        typingText.textContent = currentText.substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(type, deletingSpeed);
+                    } else if (!isDeleting && charIndex === currentText.length) {
+                        // Finished typing, pause then start deleting
+                        isDeleting = true;
+                        setTimeout(type, pauseTime);
+                    } else if (isDeleting && charIndex === 0) {
+                        // Finished deleting, move to next text
+                        isDeleting = false;
+                        textIndex = (textIndex + 1) % texts.length;
+                        setTimeout(type, 500);
+                    }
+                }
+
+                // Start the typing effect after a short delay
+                setTimeout(type, 1000);
+
+                // About section typewriter - Continuous typing with HTML formatting
+                const aboutTypingText = document.getElementById('about-typing-text');
+                const aboutTexts = [
+                    "I am <span class='bold-text'>Luis Madziro</span>... but I prefer <span class='bold-text'>eng lui</span> 😎<br><br>",
+                    "Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer"
+                ];
+                
+                let aboutTextIndex = 0;
+                let aboutCharIndex = 0;
+                let aboutTypingSpeed = 50;
+                let aboutPauseTime = 2000; // 2 seconds pause between texts
+                let aboutInitialDelay = 2000; // 2 seconds delay before starting about typewriter
+                let currentHTML = '';
+
+                function typeAbout() {
+                    const currentAboutText = aboutTexts[aboutTextIndex];
+                    
+                    if (aboutCharIndex < currentAboutText.length) {
+                        // Typing with HTML support
+                        currentHTML += currentAboutText.charAt(aboutCharIndex);
+                        aboutTypingText.innerHTML = currentHTML + '<span class="about-cursor"></span>';
+                        aboutCharIndex++;
+                        setTimeout(typeAbout, aboutTypingSpeed);
+                    } else if (aboutTextIndex < aboutTexts.length - 1) {
+                        // Move to next text
+                        aboutTextIndex++;
+                        aboutCharIndex = 0;
+                        setTimeout(typeAbout, aboutPauseTime);
+                    }
+                    // Stop after typing all texts
+                }
+
+                // Start the about typing effect after initial delay
+                setTimeout(typeAbout, aboutInitialDelay);
+            });
+        </script>
     </body>
 </html>
