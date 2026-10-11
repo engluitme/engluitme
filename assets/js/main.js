@@ -21,6 +21,27 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+/*===== CONTACT VIA WHATSAPP =====*/
+const contactForm = document.querySelector('[data-contact-form]')
+
+if(contactForm){
+    contactForm.addEventListener('submit', event =>{
+        event.preventDefault()
+
+        const formData = new FormData(contactForm)
+        const message = [
+            `Name: ${formData.get('name')}`,
+            `Email: ${formData.get('email')}`,
+            '',
+            'Message:',
+            formData.get('message')
+        ].join('\n')
+        const whatsappUrl = `https://wa.me/263737964298?text=${encodeURIComponent(message)}`
+
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    })
+}
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 

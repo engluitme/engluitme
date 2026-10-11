@@ -364,11 +364,12 @@ img {
         }
         
         .work__tag {
-            background: #f0f0f0;
+            background: #fff;
+            border: 1px solid var(--first-color);
             padding: 0.25rem 0.75rem;
             border-radius: 1rem;
             font-size: 0.8rem;
-            color: #555;
+            color: var(--second-color);
         }
         
         .work__link {
@@ -386,7 +387,7 @@ img {
         .work__link:hover {
             background: #2980b9;
         }
-        
+
         .section {
             padding: 4rem 0 2rem;
         }
