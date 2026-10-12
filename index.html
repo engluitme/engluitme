@@ -9,15 +9,15 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>eng lui</title>
-        
+        <title>Eng Lui</title>
+
         <style>
             /* Additional CSS for typewriter effect */
             .typing-container {
                 display: inline-block;
                 position: relative;
             }
-            
+
             .cursor {
                 display: inline-block;
                 width: 3px;
@@ -25,18 +25,18 @@
                 margin-left: 2px;
                 animation: blink 1s infinite;
             }
-            
+
             @keyframes blink {
                 0%, 100% { opacity: 1; }
                 50% { opacity: 0; }
             }
-            
+
             /* About section typewriter styles */
             .about-typing-container {
                 min-height: 120px;
                 position: relative;
             }
-            
+
             .about-cursor {
                 display: inline-block;
                 width: 3px;
@@ -44,12 +44,12 @@
                 margin-left: 2px;
                 animation: blink 1s infinite;
             }
-            
+
             .emoji {
                 font-size: 1.2em;
                 margin: 0 2px;
             }
-            
+
             .bold-text {
                 font-weight: bold;
                 color: var(--first-color);
@@ -61,7 +61,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">TME</a>
+                    <a href="#" class="nav__logo">Eng Lui</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -84,25 +84,23 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eng Lui</span><br> 
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eng Lui</span><br>
                         <span class="typing-container">
                             <span id="typing-text"></span><span class="cursor"></span>
                         </span>
                     </h1>
-
-                    <a href="#" class="button">Contact</a>
+                    <a href="#contact" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                   
-                  <a href="https://www.linkedin.com/in/luis-madziro-ab000b279" class="home__social-icon" aria-label="LinkedIn Profile">
-    <i class='bx bxl-linkedin'></i>
-</a>
-
-                <a href="https://twitter.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
-
-                <a href="https://www.instagram.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
-
+                    <a href="https://www.linkedin.com/in/luis-madziro-ab000b279" class="home__social-icon" aria-label="LinkedIn Profile">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://twitter.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/263737964298" class="home__social-icon" aria-label="WhatsApp">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
                 </div>
 
                 <div class="home__img">
@@ -119,28 +117,67 @@
             </section>
 
             <!--===== ABOUT =====-->
-            <section class="about section " id="about">
+            <section class="about section" id="about">
                 <h2 class="section-title">About</h2>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
+                <div class="about-hero">
+                    <!-- Curved Hello -->
+                    <div class="about-hero__hello" aria-hidden="true">
+                        <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">Get to know me</h2>
+
+                    <!-- Portrait + labels in one positioning box (no overlap with text) -->
+                    <div class="about-hero__stage">
+                        <div class="about-hero__portrait-wrap">
+                            <div class="about-hero__ring about-hero__ring--outer"></div>
+                            <div class="about-hero__ring about-hero__ring--inner"></div>
+                            <div class="about-hero__portrait">
+                                <img src="assets/img/about.jpg" alt="Eng Lui">
+                            </div>
+                        </div>
+
+                        <div class="about-hero__label about-hero__label--1">
+                            <span class="about-hero__label-dot"></span>
+                            Software Engineer
+                        </div>
+                        <div class="about-hero__label about-hero__label--2">
+                            <span class="about-hero__label-dot"></span>
+                            Technopreneur
+                        </div>
+                        <div class="about-hero__label about-hero__label--3">
+                            <span class="about-hero__label-dot"></span>
+                            Strategic Planner
+                        </div>
+                        <div class="about-hero__label about-hero__label--4">
+                            <span class="about-hero__label-dot"></span>
+                            Innovation Lead
+                        </div>
+                        <div class="about-hero__label about-hero__label--5">
+                            <span class="about-hero__label-dot"></span>
+                            Client Advocate
+                        </div>
+                    </div>
+
+                    <!-- Name + your details -->
+                    <div class="about-hero__intro">
+                        <h2 class="about-hero__name">
+                            I'm <span class="about-hero__name-accent">Eng Lui</span>
+                        </h2>
                         <div class="about-typing-container">
                             <span id="about-typing-text"></span><span class="about-cursor"></span>
-                        </div>           
-                    </div>                                   
+                        </div>
+                    </div>
                 </div>
+
             </section>
+
+
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
                 <h2 class="section-title">Skills</h2>
 
-                <div class="skills__container bd-grid">          
+                <div class="skills__container bd-grid">
                     <div>
                         <h2 class="skills__subtitle">Profesional Skills</h2>
                         <p class="skills__text">Passionate about building innovative software solutions and scalable web applications. I combine technical expertise with entrepreneurial vision to create impactful projects. Always eager to collaborate, explore new ideas, and turn challenges into opportunities.</p>
@@ -162,7 +199,7 @@
                                 <span class="skills__name">CSS</span>
                             </div>
                             <div class="skills__bar skills__css">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">80%</span>
@@ -174,7 +211,7 @@
                                 <span class="skills__name">JAVASCRIPT</span>
                             </div>
                             <div class="skills__bar skills__js">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">65%</span>
@@ -186,15 +223,15 @@
                                 <span class="skills__name">UX/UI</span>
                             </div>
                             <div class="skills__bar skills__ux">
-                                
+
                             </div>
                             <div>
                                 <span class="skills__percentage">50%</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div>              
+
+                    <div>
                         <img src="assets/img/work3.jpg" alt="" class="skills__img">
                     </div>
                 </div>
@@ -253,19 +290,20 @@
             <input type="text" name="name" placeholder="Name" class="contact__input" required>
             <input type="email" name="email" placeholder="Email" class="contact__input" required>
             <textarea name="message" cols="0" rows="10" placeholder="Wanna Work with eng lui ,Write your message right here..." class="contact__input" required></textarea>
-            
+
             <button type="submit" class="contact__button button">Send</button>
         </form>
     </div>
 </section>
 
-           
+
         </main>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">The Market Engineers</p>
             <div class="footer__social">
+                <a href="https://www.linkedin.com/in/luis-madziro-ab000b279" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://wa.me/263737964298" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.instagram.com/eng_lui_tme" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
                 <a href="https://twitter.com/eng_lui_tme" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
@@ -280,83 +318,74 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
-        
+
         <!-- Typewriter Effect Script -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Home section typewriter
+                // Home typewriter
                 const typingText = document.getElementById('typing-text');
-                const texts = ["Software Engineer", "Tech Entrepreneur"];
-                let textIndex = 0;
-                let charIndex = 0;
-                let isDeleting = false;
-                let typingSpeed = 100;
-                let deletingSpeed = 50;
-                let pauseTime = 1500;
+                if (typingText) {
+                    const texts = ["Software Engineer", "Tech Entrepreneur"];
+                    let textIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+                    let typingSpeed = 100;
+                    let deletingSpeed = 50;
+                    let pauseTime = 1500;
 
-                function type() {
-                    const currentText = texts[textIndex];
-                    
-                    if (!isDeleting && charIndex < currentText.length) {
-                        // Typing
-                        typingText.textContent += currentText.charAt(charIndex);
-                        charIndex++;
-                        setTimeout(type, typingSpeed);
-                    } else if (isDeleting && charIndex > 0) {
-                        // Deleting
-                        typingText.textContent = currentText.substring(0, charIndex - 1);
-                        charIndex--;
-                        setTimeout(type, deletingSpeed);
-                    } else if (!isDeleting && charIndex === currentText.length) {
-                        // Finished typing, pause then start deleting
-                        isDeleting = true;
-                        setTimeout(type, pauseTime);
-                    } else if (isDeleting && charIndex === 0) {
-                        // Finished deleting, move to next text
-                        isDeleting = false;
-                        textIndex = (textIndex + 1) % texts.length;
-                        setTimeout(type, 500);
+                    function type() {
+                        const currentText = texts[textIndex];
+                        if (!isDeleting && charIndex < currentText.length) {
+                            typingText.textContent += currentText.charAt(charIndex);
+                            charIndex++;
+                            setTimeout(type, typingSpeed);
+                        } else if (isDeleting && charIndex > 0) {
+                            typingText.textContent = currentText.substring(0, charIndex - 1);
+                            charIndex--;
+                            setTimeout(type, deletingSpeed);
+                        } else if (!isDeleting && charIndex === currentText.length) {
+                            isDeleting = true;
+                            setTimeout(type, pauseTime);
+                        } else if (isDeleting && charIndex === 0) {
+                            isDeleting = false;
+                            textIndex = (textIndex + 1) % texts.length;
+                            setTimeout(type, 500);
+                        }
                     }
+                    setTimeout(type, 1000);
                 }
 
-                // Start the typing effect after a short delay
-                setTimeout(type, 1000);
-
-                // About section typewriter - Continuous typing with HTML formatting
+                // About typewriter — your visionary details
                 const aboutTypingText = document.getElementById('about-typing-text');
-                const aboutTexts = [
-                    "I am <span class='bold-text'>eng lui</span> 😎<br><br>",
-                    "Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer"
-                ];
-                
-                let aboutTextIndex = 0;
-                let aboutCharIndex = 0;
-                let aboutTypingSpeed = 50;
-                let aboutPauseTime = 2000; // 2 seconds pause between texts
-                let aboutInitialDelay = 2000; // 2 seconds delay before starting about typewriter
-                let currentHTML = '';
+                if (aboutTypingText) {
+                    const aboutTexts = [
+                        "Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer"
+                    ];
+                    let aboutTextIndex = 0;
+                    let aboutCharIndex = 0;
+                    let aboutTypingSpeed = 50;
+                    let aboutPauseTime = 2000;
+                    let currentHTML = '';
 
-                function typeAbout() {
-                    const currentAboutText = aboutTexts[aboutTextIndex];
-                    
-                    if (aboutCharIndex < currentAboutText.length) {
-                        // Typing with HTML support
-                        currentHTML += currentAboutText.charAt(aboutCharIndex);
-                        aboutTypingText.innerHTML = currentHTML + '<span class="about-cursor"></span>';
-                        aboutCharIndex++;
-                        setTimeout(typeAbout, aboutTypingSpeed);
-                    } else if (aboutTextIndex < aboutTexts.length - 1) {
-                        // Move to next text
-                        aboutTextIndex++;
-                        aboutCharIndex = 0;
-                        setTimeout(typeAbout, aboutPauseTime);
+                    function typeAbout() {
+                        const currentAboutText = aboutTexts[aboutTextIndex];
+                        if (aboutCharIndex < currentAboutText.length) {
+                            currentHTML += currentAboutText.charAt(aboutCharIndex);
+                            aboutTypingText.innerHTML = currentHTML + '<span class="about-cursor"></span>';
+                            aboutCharIndex++;
+                            setTimeout(typeAbout, aboutTypingSpeed);
+                        } else if (aboutTextIndex < aboutTexts.length - 1) {
+                            aboutTextIndex++;
+                            aboutCharIndex = 0;
+                            setTimeout(typeAbout, aboutPauseTime);
+                        }
                     }
-                    // Stop after typing all texts
+                    setTimeout(typeAbout, 1500);
                 }
-
-                // Start the about typing effect after initial delay
-                setTimeout(typeAbout, aboutInitialDelay);
             });
         </script>
+
+
+
     </body>
 </html>
