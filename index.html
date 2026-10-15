@@ -1,391 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eng Lui — Software Engineer &amp; Technopreneur</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<header><div class="wrap"><nav>
+ <a class="logo" href="#home">Eng Lui</a>
+ <button class="menu" id="mb" aria-expanded="false">Menu</button>
+ <div class="links" id="lk"><a href="#home" class="on">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
+</nav></div></header>
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<section class="home" id="home"><div class="wrap hgrid">
+ <div>
+  <p class="eye">HELLO, WORLD</p>
+  <h1>Hi,<br>I'm <span class="c">Eng Lui</span><span class="type"><span id="ty">Software Engineer</span><span class="cur"></span></span></h1>
+  <div class="soc"><a href="https://www.linkedin.com/in/luis-madziro-ab000b279" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a><a href="https://twitter.com/eng_lui_tme" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.instagram.com/eng_lui_tme" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a><a href="https://wa.me/263737964298" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.300 0 .5l-.4.600-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"></path></svg></a></div>
+  <a class="btn" href="#contact">Contact</a>
+ </div>
+ <svg class="blob" viewBox="0 0 479 467" role="img" aria-label="Eng Lui portrait placeholder"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B4C8"></stop><stop offset="1" stop-color="#041f23"></stop></linearGradient><clipPath id="cp"><path d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48 245.8 6.99 311.86-14.95 370.74 14.14c60.470 29.880 97.210 93.360 106.450 160.170 8.700 62.920-22.260 120.070-60.690 170.640-42.760 56.290-90.430 117.850-161.060 121.240-76.030 3.650-143.890-44.050-190.280-104.380C17.480 299.810-17.160 219.580 9.190 145.960Z"></path></clipPath></defs>
+  <path d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48 245.8 6.99 311.86-14.95 370.74 14.14c60.470 29.880 97.210 93.360 106.450 160.170 8.700 62.920-22.260 120.070-60.690 170.640-42.760 56.290-90.430 117.850-161.060 121.240-76.030 3.650-143.890-44.050-190.280-104.380C17.480 299.810-17.160 219.580 9.190 145.960Z" fill="url(#g)"></path>
+  <image href="assets/img/hero-cartoon-on-site.jpg" x="0" y="20" width="479" height="444" preserveAspectRatio="xMidYMid slice" clip-path="url(#cp)"></image></svg>
+</div></section>
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<section id="about"><div class="wrap">
+ <p class="eye rv">ABOUT</p><h2 class="rv">Hello, I'm Eng Lui</h2>
+ <div class="ab rv">
+  <div class="stage"><div class="ring r1"></div><div class="ring r2"></div><div class="por"><img src="assets/img/about-portrait-cyan-tint.jpg" alt="Eng Lui"></div>
+   <span class="lab l1">Software Engineer</span><span class="lab l2">Technopreneur</span><span class="lab l3">Strategic Planner</span><span class="lab l4">Innovation Lead</span><span class="lab l5">Client Advocate</span></div>
+  <div><h3>I'm <b>Eng Lui</b></h3><p class="fc">I am the Founder and CEO of <b>The Market Engineers</b>.</p><a class="site" href="https://themarketengineers.co.zw" aria-label="The Market Engineers website"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.500 2.700 3.800 5.700 3.800 9s-1.300 6.300-3.800 9c-2.500-2.700-3.800-5.700-3.800-9S9.500 5.700 12 3z"></path></svg>The Market Engineers</a><div class="tw"><span id="aty">Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer</span><span class="cur"></span></div></div>
+ </div>
+</div></section>
 
-        <title>Eng Lui</title>
+<section id="skills" class="section-spaced"><div class="wrap">
+ <p class="eye rv">SKILLS</p><h2 class="rv">Professional skills</h2>
+ <div class="sk rv">
+  <div><p>Passionate about building innovative software solutions and scalable web applications. I combine technical expertise with entrepreneurial vision to create impactful projects. Always eager to collaborate, explore new ideas, and turn challenges into opportunities.</p>
+  </div>
+  <div id="sl"><div class="slides">
+   <div class="slide"><span class="n">01 / 05</span><h3>Software Development</h3><p>Bachelor's degree in Software Engineering, with a deep understanding of digital systems.</p><div class="tags"><span>Software Engineering</span><span>Digital Systems</span></div></div>
+   <div class="slide on"><span class="n">02 / 05</span><h3>Broadcast Engineering</h3><p>Experience at Star FM and Capitalk FM exposed me to mass audience communication, content distribution, and how to engage large and diverse audiences effectively.</p><div class="tags"><span>Star FM</span><span>Capitalk FM</span><span>Content Distribution</span></div></div>
+   <div class="slide"><span class="n">03 / 05</span><h3>Marketing &amp; Content Strategy</h3><p>I build content strategies that are creative and technically informed, designed for reach, engagement and brand growth, and aligned with algorithm-driven platforms.</p><div class="tags"><span>Audience Engagement</span><span>Content Strategy</span><span>Brand Growth</span></div></div>
+   <div class="slide"><span class="n">04 / 05</span><h3>Social Media Presence</h3><p>Active on Twitter and LinkedIn, I keep up with current trends, especially what resonates with audiences in Zimbabwe.</p><div class="tags"><span>Twitter</span><span>LinkedIn</span><span>Zimbabwe Audiences</span></div></div>
+   <div class="slide"><span class="n">05 / 05</span><h3>Why Luis Madziro</h3><p>A strong blend of software development, broadcast engineering and marketing: a deep understanding of digital systems, audience engagement, and content that performs well online.</p><div class="tags"><span>Tech</span><span>Broadcast</span><span>Marketing</span></div></div>
+  </div><div class="ctl"><button id="pv" aria-label="Previous slide">←</button><button id="nx" aria-label="Next slide">→</button><div class="dots" id="dots"><i class=""></i><i class="on"></i><i></i><i></i><i></i></div></div></div>
+ </div>
+</div></section>
 
-        <style>
-            /* Additional CSS for typewriter effect */
-            .typing-container {
-                display: inline-block;
-                position: relative;
-            }
+<section id="work" class="section-spaced"><div class="wrap">
+ <p class="eye rv">WORK</p><h2 class="rv">What we do</h2>
+ <div class="wk rv">
+  <div class="card"><h3>Professional Websites</h3><div class="s">Designed for your business</div><p>We create polished, user-friendly websites that bring your business online and give your brand a professional first impression.</p><div class="tags"><span>Custom Websites</span><span>Responsive Design</span><span>User-Friendly</span></div></div>
+  <div class="card"><h3>Stand Out and Grow</h3><div class="s">Make every visit count</div><p>A strong online presence helps your business get noticed, connect with the right customers, and turn interest into growth.</p><div class="tags"><span>Branding</span><span>Customer Reach</span><span>Business Growth</span></div></div>
+  <div class="card"><h3>Own Your Market</h3><div class="s">The Market Engineers</div><p>Wherever there is a market, we aim to dominate it and make your brand visible. We build digital experiences that help your business stand out from the competition.</p><div class="tags"><span>Market Visibility</span><span>Digital Strategy</span><span>Brand Impact</span></div></div>
+ </div>
+</div></section>
 
-            .cursor {
-                display: inline-block;
-                width: 3px;
-                background-color: var(--first-color);
-                margin-left: 2px;
-                animation: blink 1s infinite;
-            }
+<section id="contact" class="section-spaced"><div class="wrap">
+ <p class="eye rv">CONTACT</p><h2 class="rv">Let's work together</h2>
+ <form class="rv" id="f"><input id="n" placeholder="Name" required=""><input id="e" type="email" placeholder="Email" required=""><textarea id="m" placeholder="Wanna work with Eng Lui? Write your message right here..." required=""></textarea><button class="btn" type="submit">Send</button></form>
+</div></section>
 
-            @keyframes blink {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
+<footer><div class="wrap"><div class="logo footer-logo">The Market Engineers</div>
+ <div class="soc"><a href="https://www.linkedin.com/in/luis-madziro-ab000b279" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a><a href="https://twitter.com/eng_lui_tme" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.instagram.com/eng_lui_tme" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a><a href="https://wa.me/263737964298" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.300 0 .5l-.4.600-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"></path></svg></a></div>
+ <p>© 2026 Eng Lui. All rights reserved.</p></div></footer>
 
-            /* About section typewriter styles */
-            .about-typing-container {
-                min-height: 120px;
-                position: relative;
-            }
+<script src="assets/js/main.js"></script>
 
-            .about-cursor {
-                display: inline-block;
-                width: 3px;
-                background-color: var(--first-color);
-                margin-left: 2px;
-                animation: blink 1s infinite;
-            }
-
-            .emoji {
-                font-size: 1.2em;
-                margin: 0 2px;
-            }
-
-            .bold-text {
-                font-weight: bold;
-                color: var(--first-color);
-            }
-        </style>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Eng Lui</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eng Lui</span><br>
-                        <span class="typing-container">
-                            <span id="typing-text"></span><span class="cursor"></span>
-                        </span>
-                    </h1>
-                    <a href="#contact" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/luis-madziro-ab000b279" class="home__social-icon" aria-label="LinkedIn Profile">
-                        <i class='bx bxl-linkedin'></i>
-                    </a>
-                    <a href="https://twitter.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
-                    <a href="https://www.instagram.com/eng_lui_tme" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://wa.me/263737964298" class="home__social-icon" aria-label="WhatsApp">
-                        <i class='bx bxl-whatsapp'></i>
-                    </a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section" id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about-hero">
-                    <!-- Curved Hello -->
-                    <div class="about-hero__hello" aria-hidden="true">
-                        <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
-                    </div>
-
-                    <!-- Portrait + labels in one positioning box (no overlap with text) -->
-                    <div class="about-hero__stage">
-                        <div class="about-hero__portrait-wrap">
-                            <div class="about-hero__ring about-hero__ring--outer"></div>
-                            <div class="about-hero__ring about-hero__ring--inner"></div>
-                            <div class="about-hero__portrait">
-                                <img src="assets/img/about.jpg" alt="Eng Lui">
-                            </div>
-                        </div>
-
-                        <div class="about-hero__label about-hero__label--1">
-                            <span class="about-hero__label-dot"></span>
-                            Software Engineer
-                        </div>
-                        <div class="about-hero__label about-hero__label--2">
-                            <span class="about-hero__label-dot"></span>
-                            Technopreneur
-                        </div>
-                        <div class="about-hero__label about-hero__label--3">
-                            <span class="about-hero__label-dot"></span>
-                            Strategic Planner
-                        </div>
-                        <div class="about-hero__label about-hero__label--4">
-                            <span class="about-hero__label-dot"></span>
-                            Innovation Lead
-                        </div>
-                        <div class="about-hero__label about-hero__label--5">
-                            <span class="about-hero__label-dot"></span>
-                            Client Advocate
-                        </div>
-                    </div>
-
-                    <!-- Name + your details -->
-                    <div class="about-hero__intro">
-                        <h2 class="about-hero__name">
-                            I'm <span class="about-hero__name-accent">Eng Lui</span>
-                        </h2>
-                        <div class="about-typing-container">
-                            <span id="about-typing-text"></span><span class="about-cursor"></span>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Passionate about building innovative software solutions and scalable web applications. I combine technical expertise with entrepreneurial vision to create impactful projects. Always eager to collaborate, explore new ideas, and turn challenges into opportunities.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">93%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-                <!--===== WORK =====-->
-    <section class="work section" id="work">
-        <h2 class="section-title">Work</h2>
-
-        <div class="work__container bd-grid">
-            <div class="work__item">
-                <div class="work__content">
-                    <h3 class="work__title">Professional Websites</h3>
-                    <p class="work__subtitle">Designed for your business</p>
-                    <p class="work__description">We create polished, user-friendly websites that bring your business online and give your brand a professional first impression.</p>
-                    <div class="work__tags">
-                        <span class="work__tag">Custom Websites</span>
-                        <span class="work__tag">Responsive Design</span>
-                        <span class="work__tag">User-Friendly</span>
-                    </div>
-                </div>
-            </div>
-            <div class="work__item">
-                <div class="work__content">
-                    <h3 class="work__title">Stand Out and Grow</h3>
-                    <p class="work__subtitle">Make every visit count</p>
-                    <p class="work__description">A strong online presence helps your business get noticed, connect with the right customers, and turn interest into growth.</p>
-                    <div class="work__tags">
-                        <span class="work__tag">Branding</span>
-                        <span class="work__tag">Customer Reach</span>
-                        <span class="work__tag">Business Growth</span>
-                    </div>
-                </div>
-            </div>
-            <div class="work__item">
-                <div class="work__content">
-                    <h3 class="work__title">Own Your Market</h3>
-                    <p class="work__subtitle">The Market Engineers</p>
-                    <p class="work__description">Wherever there is a market, we aim to dominate it and make your brand visible. We build digital experiences that help your business stand out from the competition.</p>
-                    <div class="work__tags">
-                        <span class="work__tag">Market Visibility</span>
-                        <span class="work__tag">Digital Strategy</span>
-                        <span class="work__tag">Brand Impact</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!--===== CONTACT =====-->
-<section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="contact__container bd-grid">
-        <form action="https://wa.me/263737964298" method="GET" class="contact__form" data-contact-form>
-            <input type="text" name="name" placeholder="Name" class="contact__input" required>
-            <input type="email" name="email" placeholder="Email" class="contact__input" required>
-            <textarea name="message" cols="0" rows="10" placeholder="Wanna Work with eng lui ,Write your message right here..." class="contact__input" required></textarea>
-
-            <button type="submit" class="contact__button button">Send</button>
-        </form>
-    </div>
-</section>
-
-
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">The Market Engineers</p>
-            <div class="footer__social">
-                <a href="https://www.linkedin.com/in/luis-madziro-ab000b279" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://wa.me/263737964298" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://www.instagram.com/eng_lui_tme" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
-                <a href="https://twitter.com/eng_lui_tme" class="footer__icon" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
-
-            </div>
-            <p class="footer__copy">&#169; eng lui All rigths reserved</p>
-        </footer>
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-
-        <!-- Typewriter Effect Script -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Home typewriter
-                const typingText = document.getElementById('typing-text');
-                if (typingText) {
-                    const texts = ["Software Engineer", "Tech Entrepreneur"];
-                    let textIndex = 0;
-                    let charIndex = 0;
-                    let isDeleting = false;
-                    let typingSpeed = 100;
-                    let deletingSpeed = 50;
-                    let pauseTime = 1500;
-
-                    function type() {
-                        const currentText = texts[textIndex];
-                        if (!isDeleting && charIndex < currentText.length) {
-                            typingText.textContent += currentText.charAt(charIndex);
-                            charIndex++;
-                            setTimeout(type, typingSpeed);
-                        } else if (isDeleting && charIndex > 0) {
-                            typingText.textContent = currentText.substring(0, charIndex - 1);
-                            charIndex--;
-                            setTimeout(type, deletingSpeed);
-                        } else if (!isDeleting && charIndex === currentText.length) {
-                            isDeleting = true;
-                            setTimeout(type, pauseTime);
-                        } else if (isDeleting && charIndex === 0) {
-                            isDeleting = false;
-                            textIndex = (textIndex + 1) % texts.length;
-                            setTimeout(type, 500);
-                        }
-                    }
-                    setTimeout(type, 1000);
-                }
-
-                // About typewriter — your visionary details
-                const aboutTypingText = document.getElementById('about-typing-text');
-                if (aboutTypingText) {
-                    const aboutTexts = [
-                        "Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer"
-                    ];
-                    let aboutTextIndex = 0;
-                    let aboutCharIndex = 0;
-                    let aboutTypingSpeed = 50;
-                    let aboutPauseTime = 2000;
-                    let currentHTML = '';
-
-                    function typeAbout() {
-                        const currentAboutText = aboutTexts[aboutTextIndex];
-                        if (aboutCharIndex < currentAboutText.length) {
-                            currentHTML += currentAboutText.charAt(aboutCharIndex);
-                            aboutTypingText.innerHTML = currentHTML + '<span class="about-cursor"></span>';
-                            aboutCharIndex++;
-                            setTimeout(typeAbout, aboutTypingSpeed);
-                        } else if (aboutTextIndex < aboutTexts.length - 1) {
-                            aboutTextIndex++;
-                            aboutCharIndex = 0;
-                            setTimeout(typeAbout, aboutPauseTime);
-                        }
-                    }
-                    setTimeout(typeAbout, 1500);
-                }
-            });
-        </script>
-
-
-
-    </body>
-</html>
+</body></html>
