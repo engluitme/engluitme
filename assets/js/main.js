@@ -1,1 +1,124 @@
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});var mb=document.getElementById('mb'),lk=document.getElementById('lk');mb.onclick=function(){mb.setAttribute('aria-expanded',lk.classList.toggle('open'))};lk.onclick=function(){lk.classList.remove('open')};var ts=["Software Engineer","Tech Entrepreneur"],ti=0,ci=0,del=false,el=document.getElementById('ty');(function t(){var s=ts[ti];if(!del){ci++;el.textContent=s.slice(0,ci);if(ci===s.length){del=true;return setTimeout(t,1500)}setTimeout(t,100)}else{ci--;el.textContent=s.slice(0,ci);if(ci===0){del=false;ti=(ti+1)%ts.length;return setTimeout(t,400)}setTimeout(t,50)}})();var at="Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer",ai=0,ae=document.getElementById('aty');(function a(){if(ai<=at.length){ae.textContent=at.slice(0,ai++);setTimeout(a,40)}})();var sl=document.querySelectorAll('.slide'),dt=document.getElementById('dots'),si=0,hov=false;sl.forEach(function(_,i){var d=document.createElement('i');d.onclick=function(){go(i)};dt.appendChild(d)});function go(i){si=(i+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===si);dt.children[k].classList.toggle('on',k===si)})}go(0);document.getElementById('pv').onclick=function(){go(si-1)};document.getElementById('nx').onclick=function(){go(si+1)};var sw=document.getElementById('sl');sw.onmouseenter=function(){hov=true};sw.onmouseleave=function(){hov=false};setInterval(function(){if(!hov)go(si+1)},7000);var secs=document.querySelectorAll('section[id]');addEventListener('scroll',function(){var c='home';secs.forEach(function(s){if(s.getBoundingClientRect().top<140)c=s.id});lk.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c)})});document.getElementById('f').onsubmit=function(ev){ev.preventDefault();var t="Hi Eng Lui, I'm "+document.getElementById('n').value+' ('+document.getElementById('e').value+').\n\n'+document.getElementById('m').value;location.href='https://wa.me/263737964298?text='+encodeURIComponent(t)};
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: .15 });
+document.querySelectorAll('.rv').forEach(function (element) {
+  io.observe(element);
+});
+
+var mb = document.getElementById('mb');
+var lk = document.getElementById('lk');
+mb.onclick = function () {
+  mb.setAttribute('aria-expanded', lk.classList.toggle('open'));
+};
+lk.onclick = function () {
+  lk.classList.remove('open');
+};
+
+var titles = ['Software Engineer', 'Tech Entrepreneur'];
+var titleIndex = 0;
+var titleCharacter = 0;
+var deletingTitle = false;
+var titleElement = document.getElementById('ty');
+(function typeTitle() {
+  var title = titles[titleIndex];
+  if (!deletingTitle) {
+    titleCharacter++;
+    titleElement.textContent = title.slice(0, titleCharacter);
+    if (titleCharacter === title.length) {
+      deletingTitle = true;
+      return setTimeout(typeTitle, 1500);
+    }
+    setTimeout(typeTitle, 100);
+  } else {
+    titleCharacter--;
+    titleElement.textContent = title.slice(0, titleCharacter);
+    if (titleCharacter === 0) {
+      deletingTitle = false;
+      titleIndex = (titleIndex + 1) % titles.length;
+      return setTimeout(typeTitle, 400);
+    }
+    setTimeout(typeTitle, 50);
+  }
+})();
+
+var aboutText = 'Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer';
+var aboutCharacter = 0;
+var aboutElement = document.getElementById('aty');
+(function typeAbout() {
+  if (aboutCharacter <= aboutText.length) {
+    aboutElement.textContent = aboutText.slice(0, aboutCharacter++);
+    setTimeout(typeAbout, 40);
+  }
+})();
+
+var slides = document.querySelectorAll('.slide');
+var dots = document.getElementById('dots');
+var slideIndex = 0;
+var hoveringSlides = false;
+var focusingSlides = false;
+slides.forEach(function (_, index) {
+  var dot = document.createElement('i');
+  dot.onclick = function () {
+    goToSlide(index);
+  };
+  dots.appendChild(dot);
+});
+function goToSlide(index) {
+  slideIndex = (index + slides.length) % slides.length;
+  slides.forEach(function (slide, slideNumber) {
+    slide.classList.toggle('on', slideNumber === slideIndex);
+    dots.children[slideNumber].classList.toggle('on', slideNumber === slideIndex);
+  });
+}
+goToSlide(0);
+document.getElementById('pv').onclick = function () {
+  goToSlide(slideIndex - 1);
+};
+document.getElementById('nx').onclick = function () {
+  goToSlide(slideIndex + 1);
+};
+var slideContainer = document.getElementById('sl');
+slideContainer.onmouseenter = function () {
+  hoveringSlides = true;
+};
+slideContainer.onmouseleave = function () {
+  hoveringSlides = false;
+};
+slideContainer.onfocusin = function () {
+  focusingSlides = true;
+};
+slideContainer.onfocusout = function (event) {
+  if (!slideContainer.contains(event.relatedTarget)) {
+    focusingSlides = false;
+  }
+};
+setInterval(function () {
+  if (!hoveringSlides && !focusingSlides && document.visibilityState === 'visible') {
+    goToSlide(slideIndex + 1);
+  }
+}, 5000);
+
+var sections = document.querySelectorAll('section[id]');
+addEventListener('scroll', function () {
+  var currentSection = 'home';
+  sections.forEach(function (section) {
+    if (section.getBoundingClientRect().top < 140) {
+      currentSection = section.id;
+    }
+  });
+  lk.querySelectorAll('a').forEach(function (link) {
+    link.classList.toggle('on', link.getAttribute('href') === '#' + currentSection);
+  });
+});
+
+document.getElementById('f').onsubmit = function (event) {
+  event.preventDefault();
+  var message = "Hi Eng Lui, I'm " + document.getElementById('n').value + ' (' +
+    document.getElementById('e').value + ').\n\n' + document.getElementById('m').value;
+  location.href = 'https://wa.me/263737964298?text=' + encodeURIComponent(message);
+};
