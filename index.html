@@ -2,7 +2,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Eng Lui — Software Engineer &amp; Technopreneur</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<style>
+:root{--bg:#0A0A0A;--card:#141616;--line:#262a2a;--cyan:#00B4C8;--teal:#4ECDC4;--text:#fff;--mute:#8a9696;--hbg:#EDEFEF;--hink:#0A0A0A;--hmute:#4b5757;--navbg:rgba(10,10,10,.85);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F7F9F9;--card:#fff;--line:#d9e0e0;--text:#0A0A0A;--mute:#586464;--teal:#007a88;--navbg:rgba(247,249,249,.88);color-scheme:light}}
+:root[data-theme="light"]{--bg:#F7F9F9;--card:#fff;--line:#d9e0e0;--text:#0A0A0A;--mute:#586464;--teal:#007a88;--navbg:rgba(247,249,249,.88);color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:300 15px/1.6 Outfit,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}p{color:var(--mute)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2{font-weight:300;line-height:1.05;text-transform:uppercase;letter-spacing:-.01em}
+h1{font-size:clamp(40px,7vw,80px)}h2{font-size:clamp(30px,4.4vw,48px)}
+.btn{display:inline-block;padding:12px 26px;border-radius:8px;font:400 14px Outfit,sans-serif;border:0;cursor:pointer;background:var(--cyan);color:#0A0A0A;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,180,200,.3)}
+.eye{font-size:12px;letter-spacing:.2em;color:var(--teal);margin-bottom:10px}
+header{position:fixed;top:0;left:0;right:0;z-index:30;background:var(--navbg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav{display:flex;align-items:center;gap:28px;height:64px}
+.logo{font-weight:500;display:flex;align-items:center;gap:10px}
+.logo i{width:18px;height:18px;background:var(--cyan);clip-path:polygon(0 100%,0 0,22% 0,78% 62%,78% 0,100% 0,100% 100%,78% 100%,22% 38%,22% 100%)}
+.links{display:flex;gap:26px;margin-left:auto;font-size:13px;color:var(--mute)}
+.links a:hover,.links a.on{color:var(--cyan)}
+.menu{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;color:var(--text);font:400 13px Outfit}
+section{padding:96px 0}
+.home{min-height:100vh;display:flex;align-items:center;padding-top:110px;background:radial-gradient(circle at 80% 30%,rgba(0,180,200,.16),transparent 55%)}
+.hgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+.hgrid h1 span.c{color:var(--cyan)}
+.type{display:block;color:var(--teal);font-size:.5em;margin-top:10px;min-height:1.2em}
+.cur{display:inline-block;width:3px;height:.9em;background:var(--cyan);margin-left:3px;vertical-align:middle;animation:bl 1s infinite}
+@keyframes bl{50%{opacity:0}}
+.soc{display:flex;gap:12px;margin:30px 0}
+.soc a{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:400;color:var(--teal);transition:.25s}
+.soc a:hover{background:var(--cyan);color:#0A0A0A;border-color:var(--cyan);transform:translateY(-3px)}
+.soc svg{width:18px;height:18px;fill:currentColor}
+.soc svg.st{fill:none;stroke:currentColor;stroke-width:2}
+.blob{filter:drop-shadow(0 0 26px rgba(0,180,200,.5));width:100%;max-width:400px;margin:0 auto;display:block;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.ab{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center;margin-top:40px}
+.stage{position:relative;max-width:360px;aspect-ratio:1;margin:0 auto;width:100%}
+.ring{position:absolute;border-radius:50%;border:1px dashed var(--line)}
+.r1{inset:0;animation:sp 40s linear infinite}.r2{inset:12%;border-color:var(--cyan);animation:sp 30s linear infinite reverse}
+@keyframes sp{to{transform:rotate(360deg)}}
+.por{overflow:hidden;position:absolute;inset:22%;border-radius:50%;background:linear-gradient(135deg,var(--cyan),#041f23);display:grid;place-items:center;font-size:56px;font-weight:200;color:#fff}
+.por img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.lab{position:absolute;font-size:11px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:4px 12px;white-space:nowrap;color:var(--teal)}
+.lab:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:7px}
+.l1{top:2%;left:30%}.l2{top:22%;right:-6%}.l3{bottom:18%;right:-4%}.l4{bottom:4%;left:20%}.l5{top:34%;left:-8%}
+.ab h3{font-weight:300;font-size:28px;margin-bottom:12px}.ab h3 b{color:var(--cyan);font-weight:400}
+.fc{font-size:17px;color:var(--text);margin-bottom:4px}.fc b{color:var(--cyan);font-weight:400}
+.site{display:inline-flex;align-items:center;gap:9px;border-bottom:0!important;color:var(--teal);font-size:14px;border-bottom:1px solid var(--teal);margin-bottom:20px}.site:hover{color:var(--cyan);border-color:var(--cyan)}
+.site svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+.tw{min-height:110px;color:var(--mute);font-size:16px}
+.sk{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;margin-top:40px;align-items:center}
+.bar{margin-top:22px}
+.bar div.t{display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px}
+.bar .tr{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar .fi{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--teal));border-radius:99px;transition:width 1.6s ease .3s}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;gap:14px}
+.panel b{font-weight:200;font-size:46px;color:var(--cyan);line-height:1}
+.slides{display:grid}
+.slide{grid-area:1/1;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;opacity:0;visibility:hidden;transform:translateX(24px);transition:opacity .5s,transform .5s,visibility .5s}
+.slide.on{opacity:1;visibility:visible;transform:none}
+.slide .n{font-size:12px;letter-spacing:.2em;color:var(--teal)}
+.slide h3{font-weight:300;font-size:26px;margin:8px 0 12px}
+.slide p{font-size:14px}
+.ctl{display:flex;align-items:center;gap:10px;margin-top:16px}
+.ctl button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--text);cursor:pointer;font-size:16px}
+.ctl button:hover{border-color:var(--cyan);color:var(--cyan)}
+.dots{display:flex;gap:8px;margin-left:auto}.dots i{width:8px;height:8px;border-radius:50%;background:var(--line);cursor:pointer}.dots i.on{background:var(--cyan)}
+.wk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan)}
+.card h3{font-weight:400;font-size:21px}.card .s{color:var(--teal);font-size:12px;margin:2px 0 12px}
+.card p{font-size:13px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:11px;color:var(--teal)}
+form{display:grid;gap:12px;max-width:620px;margin-top:36px}
+input,textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:13px 15px;color:var(--text);font:300 14px Outfit,sans-serif}
+input:focus,textarea:focus{outline:2px solid var(--cyan);border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+form .btn{justify-self:start}
+footer{border-top:1px solid var(--line);padding:44px 0;text-align:center}
+footer .soc{justify-content:center;margin:18px 0}footer p{font-size:12px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}.in .fi{width:var(--w)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:860px){.hgrid,.ab,.sk,.wk{grid-template-columns:1fr}section{padding:64px 0}.menu{display:block}
+.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px}.links.open{display:flex}.links a{padding:12px 0}
+.l2,.l3{right:0}.l5{left:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.fi{width:var(--w)}}
+</style></head><body>
 <header><div class="wrap"><nav>
  <a class="logo" href="#home">Eng Lui</a>
  <button class="menu" id="mb" aria-expanded="false">Menu</button>
@@ -18,19 +106,19 @@
  </div>
  <svg class="blob" viewBox="0 0 479 467" role="img" aria-label="Eng Lui portrait placeholder"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B4C8"></stop><stop offset="1" stop-color="#041f23"></stop></linearGradient><clipPath id="cp"><path d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48 245.8 6.99 311.86-14.95 370.74 14.14c60.470 29.880 97.210 93.360 106.450 160.170 8.700 62.920-22.260 120.070-60.690 170.640-42.760 56.290-90.430 117.850-161.060 121.240-76.030 3.650-143.890-44.050-190.280-104.380C17.480 299.810-17.160 219.580 9.190 145.960Z"></path></clipPath></defs>
   <path d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48 245.8 6.99 311.86-14.95 370.74 14.14c60.470 29.880 97.210 93.360 106.450 160.170 8.700 62.920-22.260 120.070-60.690 170.640-42.760 56.290-90.430 117.850-161.060 121.240-76.030 3.650-143.890-44.050-190.280-104.380C17.480 299.810-17.160 219.580 9.190 145.960Z" fill="url(#g)"></path>
-  <image href="assets/img/hero-cartoon-on-site.jpg" x="0" y="20" width="479" height="444" preserveAspectRatio="xMidYMid slice" clip-path="url(#cp)"></image></svg>
+  <image href="images/hero-cartoon-on-site.jpg" x="0" y="20" width="479" height="444" preserveAspectRatio="xMidYMid slice" clip-path="url(#cp)"></image></svg>
 </div></section>
 
-<section id="about"><div class="wrap">
+<section id="about" style="padding-top:40px"><div class="wrap">
  <p class="eye rv">ABOUT</p><h2 class="rv">Hello, I'm Eng Lui</h2>
  <div class="ab rv">
-  <div class="stage"><div class="ring r1"></div><div class="ring r2"></div><div class="por"><img src="assets/img/about-portrait-cyan-tint.jpg" alt="Eng Lui"></div>
+  <div class="stage"><div class="ring r1"></div><div class="ring r2"></div><div class="por"><img src="images/about-portrait-cyan-tint.jpg" alt="Eng Lui"></div>
    <span class="lab l1">Software Engineer</span><span class="lab l2">Technopreneur</span><span class="lab l3">Strategic Planner</span><span class="lab l4">Innovation Lead</span><span class="lab l5">Client Advocate</span></div>
   <div><h3>I'm <b>Eng Lui</b></h3><p class="fc">I am the Founder and CEO of <b>The Market Engineers</b>.</p><a class="site" href="https://themarketengineers.co.zw" aria-label="The Market Engineers website"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.500 2.700 3.800 5.700 3.800 9s-1.300 6.300-3.800 9c-2.500-2.700-3.800-5.700-3.800-9S9.500 5.700 12 3z"></path></svg>The Market Engineers</a><div class="tw"><span id="aty">Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer</span><span class="cur"></span></div></div>
  </div>
 </div></section>
 
-<section id="skills" class="section-spaced"><div class="wrap">
+<section id="skills" style="padding-top:20px"><div class="wrap">
  <p class="eye rv">SKILLS</p><h2 class="rv">Professional skills</h2>
  <div class="sk rv">
   <div><p>Passionate about building innovative software solutions and scalable web applications. I combine technical expertise with entrepreneurial vision to create impactful projects. Always eager to collaborate, explore new ideas, and turn challenges into opportunities.</p>
@@ -45,7 +133,7 @@
  </div>
 </div></section>
 
-<section id="work" class="section-spaced"><div class="wrap">
+<section id="work" style="padding-top:20px"><div class="wrap">
  <p class="eye rv">WORK</p><h2 class="rv">What we do</h2>
  <div class="wk rv">
   <div class="card"><h3>Professional Websites</h3><div class="s">Designed for your business</div><p>We create polished, user-friendly websites that bring your business online and give your brand a professional first impression.</p><div class="tags"><span>Custom Websites</span><span>Responsive Design</span><span>User-Friendly</span></div></div>
@@ -54,15 +142,15 @@
  </div>
 </div></section>
 
-<section id="contact" class="section-spaced"><div class="wrap">
+<section id="contact" style="padding-top:20px"><div class="wrap">
  <p class="eye rv">CONTACT</p><h2 class="rv">Let's work together</h2>
  <form class="rv" id="f"><input id="n" placeholder="Name" required=""><input id="e" type="email" placeholder="Email" required=""><textarea id="m" placeholder="Wanna work with Eng Lui? Write your message right here..." required=""></textarea><button class="btn" type="submit">Send</button></form>
 </div></section>
 
-<footer><div class="wrap"><div class="logo footer-logo">The Market Engineers</div>
+<footer><div class="wrap"><div class="logo" style="justify-content:center">The Market Engineers</div>
  <div class="soc"><a href="https://www.linkedin.com/in/luis-madziro-ab000b279" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a><a href="https://twitter.com/eng_lui_tme" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.instagram.com/eng_lui_tme" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a><a href="https://wa.me/263737964298" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.300 0 .5l-.4.600-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"></path></svg></a></div>
  <p>© 2026 Eng Lui. All rights reserved.</p></div></footer>
 
-<script src="assets/js/main.js"></script>
+<script>var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});var mb=document.getElementById('mb'),lk=document.getElementById('lk');mb.onclick=function(){mb.setAttribute('aria-expanded',lk.classList.toggle('open'))};lk.onclick=function(){lk.classList.remove('open')};var ts=["Software Engineer","Tech Entrepreneur"],ti=0,ci=0,del=false,el=document.getElementById('ty');(function t(){var s=ts[ti];if(!del){ci++;el.textContent=s.slice(0,ci);if(ci===s.length){del=true;return setTimeout(t,1500)}setTimeout(t,100)}else{ci--;el.textContent=s.slice(0,ci);if(ci===0){del=false;ti=(ti+1)%ts.length;return setTimeout(t,400)}setTimeout(t,50)}})();var at="Visionary | An Exceptional Technopreneur | Unique Blend of Technical Expertise | Entrepreneurial Vision | Relentless Drive for Innovation in Financial Markets | Software Engineer",ai=0,ae=document.getElementById('aty');(function a(){if(ai<=at.length){ae.textContent=at.slice(0,ai++);setTimeout(a,40)}})();var sl=document.querySelectorAll('.slide'),dt=document.getElementById('dots'),si=0,hov=false;sl.forEach(function(_,i){var d=document.createElement('i');d.onclick=function(){go(i)};dt.appendChild(d)});function go(i){si=(i+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===si);dt.children[k].classList.toggle('on',k===si)})}go(0);document.getElementById('pv').onclick=function(){go(si-1)};document.getElementById('nx').onclick=function(){go(si+1)};var sw=document.getElementById('sl');sw.onmouseenter=function(){hov=true};sw.onmouseleave=function(){hov=false};setInterval(function(){if(!hov)go(si+1)},7000);var secs=document.querySelectorAll('section[id]');addEventListener('scroll',function(){var c='home';secs.forEach(function(s){if(s.getBoundingClientRect().top<140)c=s.id});lk.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c)})});document.getElementById('f').onsubmit=function(ev){ev.preventDefault();var t='Hi Eng Lui, I\'m '+n.value+' ('+e.value+').\n\n'+m.value;location.href='https://wa.me/263737964298?text='+encodeURIComponent(t)};</script>
 
 </body></html>
