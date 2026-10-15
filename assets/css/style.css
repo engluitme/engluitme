@@ -86,5 +86,5 @@ footer .soc{justify-content:center;margin:18px 0}footer p{font-size:12px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 @media(max-width:860px){.hgrid,.ab,.sk,.wk{grid-template-columns:1fr}section{padding:64px 0}.menu{display:block}
 .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px}.links.open{display:flex}.links a{padding:12px 0}
-.l2,.l3{right:0}.l5{left:0}}
+.l2,.l3{right:0}.l5{left:0}.ab>div:last-child{text-align:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.fi{width:var(--w)}}
