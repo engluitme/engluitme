@@ -120,5 +120,5 @@ document.getElementById('f').onsubmit = function (event) {
   event.preventDefault();
   var message = "Hi Eng Lui, I'm " + document.getElementById('n').value + ' (' +
     document.getElementById('e').value + ').\n\n' + document.getElementById('m').value;
-  location.href = 'https://wa.me/263737964298?text=' + encodeURIComponent(message);
+  location.href = 'https://wa.me/263790443607?text=' + encodeURIComponent(message);
 };
