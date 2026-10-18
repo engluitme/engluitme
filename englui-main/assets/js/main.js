@@ -36,7 +36,7 @@ if(contactForm){
             'Message:',
             formData.get('message')
         ].join('\n')
-        const whatsappUrl = `https://wa.me/263737964298?text=${encodeURIComponent(message)}`
+        const whatsappUrl = `https://wa.me/263790443607?text=${encodeURIComponent(message)}`
 
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     })
