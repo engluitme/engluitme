@@ -204,7 +204,7 @@ textarea {
 
 .portrait {
   position: absolute;
-  inset: 28%;
+  inset: 20%;
   overflow: hidden;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), #041f23);
@@ -454,9 +454,6 @@ button:focus-visible {
   }
   .stage {
     max-width: 360px;
-  }
-  .portrait {
-    inset: 36%;
   }
   .role-one { transform: translate(-50%, -50%) rotate(0deg) translateX(100px); }
   .role-two { transform: translate(-50%, -50%) rotate(72deg) translateX(100px); }
