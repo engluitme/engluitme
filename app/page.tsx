@@ -315,7 +315,7 @@ export default function Home() {
               <p className="eyebrow">ABOUT</p>
             </Reveal>
             <Reveal>
-              <div className="mt-10 grid items-center gap-14 min-[861px]:grid-cols-[1fr_1.2fr]">
+              <div className="about-layout mt-10">
                 <div className="stage">
                   <div className="ring ring-outer" />
                   <div className="ring ring-inner" />
@@ -360,27 +360,25 @@ export default function Home() {
                   <h3 className="mb-3 text-[28px] font-light">
                     <b className="font-normal text-[var(--cyan)]">Eng Lui</b>
                   </h3>
-                  <div className="company-intro">
-                    <p className="fc mb-1 text-[17px] text-[var(--text)]">
-                      I am the Founder and CEO of{" "}
-                      <b className="font-normal text-[var(--cyan)]">The Market Engineers</b>.
-                    </p>
-                    <a
-                      className="market-engineers-link mb-5 flex items-center gap-2 text-sm"
-                      href="https://themarketengineers.co.zw"
-                      aria-label="The Market Engineers website"
+                  <p className="fc mb-1 text-[17px] text-[var(--text)]">
+                    I am the Founder and CEO of{" "}
+                    <b className="font-normal text-[var(--cyan)]">The Market Engineers</b>.
+                  </p>
+                  <a
+                    className="market-engineers-link mb-5 inline-flex items-center gap-2 text-sm"
+                    href="https://themarketengineers.co.zw"
+                    aria-label="The Market Engineers website"
+                  >
+                    <svg
+                      className="h-5 w-5 fill-none stroke-current"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
-                      <svg
-                        className="h-5 w-5 fill-none stroke-current"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <circle cx="12" cy="12" r="9" />
-                        <path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" />
-                      </svg>
-                      The Market Engineers
-                    </a>
-                  </div>
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" />
+                    </svg>
+                    The Market Engineers
+                  </a>
                   <p className="min-h-[110px] text-base">
                     {aboutText.slice(0, aboutProgress)}
                     <span className="cursor" />

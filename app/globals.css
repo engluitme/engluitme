@@ -89,6 +89,13 @@ textarea {
   padding-top: 40px;
 }
 
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
 .home {
   min-height: 100vh;
   padding-top: 110px;
@@ -181,6 +188,8 @@ textarea {
   position: relative;
   width: 100%;
   max-width: 440px;
+  container-type: inline-size;
+  --role-radius: 38cqw;
   aspect-ratio: 1;
   margin-inline: auto;
 }
@@ -204,7 +213,7 @@ textarea {
 
 .portrait {
   position: absolute;
-  inset: 20%;
+  inset: 28%;
   overflow: hidden;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), #041f23);
@@ -215,6 +224,8 @@ textarea {
   height: 100%;
   object-fit: cover;
   object-position: 50% 20%;
+  transform: scale(1.4);
+  transform-origin: 50% 20%;
 }
 
 .portrait-label {
@@ -238,20 +249,12 @@ textarea {
   content: "";
 }
 
-.company-intro {
-  width: fit-content;
-  max-width: 100%;
-  margin-inline: auto;
-}
-
 .market-engineers-link {
-  width: fit-content;
-  margin-inline: auto;
   color: var(--cyan);
 }
 
 .market-engineers-link:hover {
-  color: var(--cyan);
+  color: var(--teal);
 }
 
 .role-orbit {
@@ -275,16 +278,21 @@ textarea {
   animation: spin 30s linear infinite reverse;
 }
 
-.role-one { transform: translate(-50%, -50%) rotate(0deg) translateX(152px); }
-.role-two { transform: translate(-50%, -50%) rotate(72deg) translateX(152px); }
-.role-three { transform: translate(-50%, -50%) rotate(144deg) translateX(152px); }
-.role-four { transform: translate(-50%, -50%) rotate(216deg) translateX(152px); }
-.role-five { transform: translate(-50%, -50%) rotate(288deg) translateX(152px); }
+.role-one { transform: translate(-50%, -50%) rotate(0deg) translateX(var(--role-radius)); }
+.role-two { transform: translate(-50%, -50%) rotate(72deg) translateX(var(--role-radius)); }
+.role-three { transform: translate(-50%, -50%) rotate(144deg) translateX(var(--role-radius)); }
+.role-four { transform: translate(-50%, -50%) rotate(216deg) translateX(var(--role-radius)); }
+.role-five { transform: translate(-50%, -50%) rotate(288deg) translateX(var(--role-radius)); }
 .role-one .role-counter-angle { transform: rotate(0deg); }
 .role-two .role-counter-angle { transform: rotate(-72deg); }
 .role-three .role-counter-angle { transform: rotate(-144deg); }
 .role-four .role-counter-angle { transform: rotate(-216deg); }
 .role-five .role-counter-angle { transform: rotate(-288deg); }
+
+.about-copy {
+  width: min(100%, 640px);
+  text-align: center;
+}
 
 .carousel-slides {
   display: grid;
@@ -455,17 +463,12 @@ button:focus-visible {
   .stage {
     max-width: 360px;
   }
-  .role-one { transform: translate(-50%, -50%) rotate(0deg) translateX(100px); }
-  .role-two { transform: translate(-50%, -50%) rotate(72deg) translateX(100px); }
-  .role-three { transform: translate(-50%, -50%) rotate(144deg) translateX(100px); }
-  .role-four { transform: translate(-50%, -50%) rotate(216deg) translateX(100px); }
-  .role-five { transform: translate(-50%, -50%) rotate(288deg) translateX(100px); }
+  .portrait {
+    inset: 30%;
+  }
   .role-orbit,
   .role-counter-spin {
     animation-duration: 40s;
-  }
-  .about-copy {
-    text-align: center;
   }
   .fc {
     font-size: clamp(10px, 3.1vw, 13px);
